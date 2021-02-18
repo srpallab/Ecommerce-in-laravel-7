@@ -87,6 +87,7 @@
         </div>
     </section>
     <!--/ End Login -->
+    @include('frontend.layouts.footer')
 @endsection
 
 @push('styles')

@@ -72,17 +72,20 @@
   </div><!-- End .mobile-menu-wrapper -->
 </div><!-- End .mobile-menu-container -->
 
-<header class="header shop">
-    <!-- Topbar -->
+
+
+<header class="header shop front-page">
+  <!-- Topbar -->
   <div class="topbar">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 col-md-12 col-12">
+    <div class="container-fluid">
+      <div class="row align-items-center">
+        <div class="col-lg-4 col-md-12 col-12">
           <!-- Top Left -->
           <div class="top-left">
             <ul class="list-main">
               @php
               $settings=DB::table('settings')->get();
+              
               @endphp
               <li>
 		<i class="ti-headphone-alt"></i>
@@ -96,7 +99,20 @@
           </div>
           <!--/ End Top Left -->
         </div>
-        <div class="col-lg-6 col-md-12 col-12">
+	<div class="col-lg-4 col-md-4 col-12">
+          <div class="search-bar-top">
+            <div class="search-bar front-search">
+              <form method="POST" action="{{route('product.search')}}">
+                @csrf
+                <input name="search" placeholder="Search Products Here....."
+		       type="search">
+                <button class="btnn" type="submit">
+		  <i class="ti-search"></i></button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-12 col-12">
           <!-- Top Right -->
           <div class="right-content">
             <ul class="list-main">
@@ -130,11 +146,12 @@
       </div>
     </div>
   </div>
-    <!-- End Topbar -->
+  <!-- End Topbar -->
   <div class="middle-inner">
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">
-        <div class="col-lg-2 col-md-2 col-12">
+        <div class="col-lg-6 col-md-2 col-12">
+	  
           <!-- Logo -->
           <div class="logo">
             <div class="header-left">
@@ -143,6 +160,7 @@
 		<i class="fa fa-bars"></i>
 	      </button>
 	      <!-- Logo -->
+      
 	      @php
 	      $settings=DB::table('settings')->get();
 	      @endphp                    
@@ -173,26 +191,8 @@
           <!--/ End Search Form -->
           <div class="mobile-nav"></div>
         </div>
-        <div class="col-lg-8 col-md-7 col-12">
-          <div class="search-bar-top">
-            <div class="search-bar">
-              <select>
-                <option >All Category</option>
-                @foreach(Helper::getAllCategory() as $cat)
-                  <option>{{$cat->title}}</option>
-                @endforeach
-              </select>
-              <form method="POST" action="{{route('product.search')}}">
-                @csrf
-                <input name="search" placeholder="Search Products Here....."
-		       type="search">
-                <button class="btnn" type="submit">
-		  <i class="ti-search"></i></button>
-              </form>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-2 col-md-3 col-12">
+        
+        <div class="col-lg-6 col-md-3 col-12">
           <div class="right-bar">
             <!-- Search Form -->
             <div class="sinlge-bar shopping">
@@ -235,13 +235,8 @@
 			<img src="{{$photo[0]}}" alt="{{$photo[0]}}">
 		      </a>
                       <h4>
-			<a href="{{route('product-detail',$data->product['slug'])}}"
-			   target="_blank">{{$data->product['title']}}
-			</a>
-		      </h4>
-                      <p class="quantity">{{$data->quantity}} x -
-			<span class="amount">${{number_format($data->price,2)}}</span>
-		      </p>
+			<a href="{{route('product-detail',$data->product['slug'])}}" target="_blank">{{$data->product['title']}}</a></h4>
+                      <p class="quantity">{{$data->quantity}} x - <span class="amount">${{number_format($data->price,2)}}</span></p>
                     </li>
                   @endforeach
                 </ul>
@@ -257,8 +252,8 @@
               <!--/ End Shopping Item -->
             </div>
             {{-- <div class="sinlge-bar">
-				       <a href="{{route('wishlist')}}" class="single-icon"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
-                        </div> --}}
+			 <a href="{{route('wishlist')}}" class="single-icon"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+                         </div> --}}
             <div class="sinlge-bar shopping">
               <a href="{{route('cart')}}" class="single-icon"><i class="ti-bag"></i> <span class="total-count">{{Helper::cartCount()}}</span></a>
               <!-- Shopping Item -->
@@ -298,3 +293,4 @@
       </div>
     </div>
   </div>
+</header>

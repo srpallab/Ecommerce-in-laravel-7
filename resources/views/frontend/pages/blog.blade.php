@@ -170,6 +170,7 @@
         </div>
     </section>
     <!--/ End Blog Single -->
+    @include('frontend.layouts.footer')
 @endsection
 @push('styles')
     <style>

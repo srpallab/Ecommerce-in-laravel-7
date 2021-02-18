@@ -9,8 +9,10 @@
 
 <!-- StyleSheet -->
 
+
 <!-- Bootstrap -->
 <link rel="stylesheet" href="{{asset('frontend/css/bootstrap.css')}}">
+
 <!-- Magnific Popup -->
 <link rel="stylesheet" href="{{asset('frontend/css/magnific-popup.min.css')}}">
 <!-- Font Awesome -->
@@ -32,11 +34,18 @@
 <!-- Jquery Ui -->
 <link rel="stylesheet" href="{{asset('frontend/css/jquery-ui.css')}}">
 
+
+<!-- FNC StyleSheet -->
+<link rel="stylesheet" href="{{asset('frontend/css/fnc.css')}}">
+
 <!-- Eshop StyleSheet -->
 <link rel="stylesheet" href="{{asset('frontend/css/reset.css')}}">
 <link rel="stylesheet" href="{{asset('frontend/css/style.css')}}">
 <link rel="stylesheet" href="{{asset('frontend/css/responsive.css')}}">
-<script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5f2e5abf393162001291e431&product=inline-share-buttons' async='async'></script>
+
+
+
+
 <style>
     /* Multilevel dropdown */
     .dropdown-submenu {

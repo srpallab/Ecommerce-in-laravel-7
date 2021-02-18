@@ -1,25 +1,26 @@
+@include('frontend.layouts.header')
 @extends('frontend.layouts.master')
 
 @section('title','Checkout page')
 
 @section('main-content')
-
-    <!-- Breadcrumbs -->
-    <div class="breadcrumbs">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="bread-inner">
-                        <ul class="bread-list">
-                            <li><a href="{{route('home')}}">Home<i class="ti-arrow-right"></i></a></li>
-                            <li class="active"><a href="javascript:void(0)">Checkout</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+  
+  <!-- Breadcrumbs -->
+  <div class="breadcrumbs">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="bread-inner">
+            <ul class="bread-list">
+              <li><a href="{{route('home')}}">Home<i class="ti-arrow-right"></i></a></li>
+              <li class="active"><a href="javascript:void(0)">Checkout</a></li>
+            </ul>
+          </div>
         </div>
+      </div>
     </div>
-    <!-- End Breadcrumbs -->
+  </div>
+  <!-- End Breadcrumbs -->
             
     <!-- Start Checkout -->
     <section class="shop checkout section">
@@ -500,6 +501,7 @@
         </div>
     </section>
     <!-- End Shop Newsletter -->
+    @include('frontend.layouts.footer')
 @endsection
 @push('styles')
 	<style>

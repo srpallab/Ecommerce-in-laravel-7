@@ -86,9 +86,9 @@ Route::resource('/comment','PostCommentController');
 // Coupon
 Route::post('/coupon-store','CouponController@couponStore')->name('coupon-store');
 // Payment
-Route::get('payment', 'PayPalController@payment')->name('payment');
-Route::get('cancel', 'PayPalController@cancel')->name('payment.cancel');
-Route::get('payment/success', 'PayPalController@success')->name('payment.success');
+//Route::get('payment', 'PayPalController@payment')->name('payment');
+//Route::get('cancel', 'PayPalController@cancel')->name('payment.cancel');
+//Route::get('payment/success', 'PayPalController@success')->name('payment.success');
 
 
 

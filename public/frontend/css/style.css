@@ -643,7 +643,7 @@ Version:1.0
 	position: relative;
 }
 .header.shop .search-bar {
-	width: 535px;
+	width: 100%;
 	height: 50px;
 	display: inline-block;
 	background: #fff;
@@ -4910,3 +4910,36 @@ Version:1.0
 /*=============================
 	End Footer CSS
 ===============================*/
+.header.shop.front-page {
+  background: transparent;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+}
+.header.shop.front-page .topbar {
+  background: transparent;
+  padding: 0;
+}
+.header.shop.front-page .middle-inner {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.search-bar.front-search {
+  background: transparent !important;
+  border: none !important;
+  border-bottom: 1px solid #ececec !important;
+  border-radius: 0 !important;
+}
+
+.search-bar.front-search .btnn {
+  background: transparent !important;
+  right: -20px !important;
+}
+
+.search-bar.front-search input:focus {
+    outline: none;
+}
